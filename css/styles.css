@@ -9,6 +9,7 @@ html {
 
 body {
     min-height: 100vh;
+    
 }
 
 .container {
@@ -20,6 +21,7 @@ body {
     display: inline-flex;
     justify-content: flex-end;
     margin: 1em;
+    
 }
 
 
@@ -48,11 +50,16 @@ body {
 #vidpause {
     display: inline-flex;
     float: right;
+    background: linear-gradient(45deg, rgb(115, 6, 204), rgb(201, 31, 207));
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 1em;
     
 }
 
 .stopfade { 
-    opacity: .5; 
+    opacity: .3; 
 }
 
 
@@ -66,15 +73,21 @@ body {
 }
 
 .callToActionTitle {
-    font-size: 2em;
+    font-family: 'Yellowtail', cursive, serif;
+    font-size: 3em;
     background: -webkit-linear-gradient(45deg, rgb(115, 6, 204), rgb(201, 31, 207)); 
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: .1em;
+    margin: .2em;
+    padding: 0 2em;
+    text-align: center;
 }
 
 .callToActionSubtitle {
     font-size: 1.2em;
+    color: rgb(79, 82, 105);
+    text-align: center;
 }
 
 .emailTextBox {
@@ -89,20 +102,64 @@ body {
     margin: 1em 0;
     background: linear-gradient(45deg, rgb(115, 6, 204), rgb(201, 31, 207));
     color: #fff;
+    border: none;
+    border-radius: 25px;
 }
 
 
 /*Media Queries for Small Screen*/
 @media screen and (max-device-width: 800px) {
     html {
-         background: url(../media/love_img.jpg) #000 no-repeat center center/100% fixed;
+         background: url(../media/love_img.jpg) #000 no-repeat center center/100vw fixed;
     }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .emailContainer {
+        display: inline-flex;
+        width: 100%;
+        height: 75vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .callToActionTitle {
+        font-size: 2em;
+        background: -webkit-linear-gradient(45deg, rgb(115, 6, 204), rgb(201, 31, 207)); 
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1.5em;
+        text-align: center;
+    }
+    
+    .callToActionSubtitle {
+        font-size: 1.2em;
+        color: rgb(79, 82, 105);
+        text-align: center;
+    }
+
     #yogaVideo {
         display: none;
     }
 
     #vidpause {
         display: none;
+    }
+
+    .callToActionSubtitle {
+        font-size: 1.2em;
+        color: #fff;
+    }
+
+    .emailTextBox {
+        opacity: .70;
+        max-width: 20rem;
+        height: 2rem;
     }
 }
 

@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.pauseContainer {
+    display: inline-flex;
+    justify-content: flex-end;
+    margin: 1em;
+}
+
+
+/* .videoContainer {
+    height: 100vh;
+ } */
+
+#yogaVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: 100%;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: #000 no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+#vidpause {
+    display: inline-flex;
+    float: right;
+    
+}
+
+.stopfade { 
+    opacity: .5; 
+}
+
+
+.emailContainer {
+    display: inline-flex;
+    width: 100%;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.callToActionTitle {
+    font-size: 2em;
+    background: -webkit-linear-gradient(45deg, rgb(115, 6, 204), rgb(201, 31, 207)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: .1em;
+}
+
+.callToActionSubtitle {
+    font-size: 1.2em;
+}
+
+.emailTextBox {
+    opacity: .70;
+    width: 30rem;
+    height: 2rem;
+}
+
+.submitButton {
+    width: 10rem;
+    height: 2rem;
+    margin: 1em 0;
+    background: linear-gradient(45deg, rgb(115, 6, 204), rgb(201, 31, 207));
+    color: #fff;
+}
+
+
+/*Media Queries for Small Screen*/
+@media screen and (max-device-width: 800px) {
+    html {
+         background: url(../media/love_img.jpg) #000 no-repeat center center/100% fixed;
+    }
+    #yogaVideo {
+        display: none;
+    }
+
+    #vidpause {
+        display: none;
+    }
+}
+
+

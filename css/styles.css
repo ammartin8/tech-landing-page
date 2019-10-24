@@ -9,7 +9,6 @@ html {
 
 body {
     min-height: 100vh;
-    
 }
 
 .container {
@@ -23,11 +22,6 @@ body {
     margin: 1em;
     
 }
-
-
-/* .videoContainer {
-    height: 100vh;
- } */
 
 #yogaVideo {
     position: fixed;
